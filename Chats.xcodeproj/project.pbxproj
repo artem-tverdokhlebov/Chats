@@ -7,21 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CD1B00F40397027BB355021 /* Pods_Chats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9994F6B4AEE082CF2AF08B /* Pods_Chats.framework */; };
+		AC81262E1F308A9500C22B55 /* CustomTransform_RealmOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81262D1F308A9500C22B55 /* CustomTransform_RealmOptional.swift */; };
+		AC8126301F308C0A00C22B55 /* MessagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81262F1F308C0A00C22B55 /* MessagesResponse.swift */; };
 		ACAD650E1F30762A00857798 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD650D1F30762A00857798 /* AppDelegate.swift */; };
-		ACAD65101F30762A00857798 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD650F1F30762A00857798 /* ViewController.swift */; };
+		ACAD65101F30762A00857798 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD650F1F30762A00857798 /* ChatsViewController.swift */; };
 		ACAD65131F30762A00857798 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAD65111F30762A00857798 /* Main.storyboard */; };
 		ACAD65151F30762A00857798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAD65141F30762A00857798 /* Assets.xcassets */; };
 		ACAD65181F30762A00857798 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAD65161F30762A00857798 /* LaunchScreen.storyboard */; };
+		ACAD65201F307D8300857798 /* ServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD651F1F307D8300857798 /* ServerAPI.swift */; };
+		ACAD65231F307E3E00857798 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD65221F307E3E00857798 /* Channel.swift */; };
+		ACAD65251F307EAA00857798 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD65241F307EAA00857798 /* User.swift */; };
+		ACAD65271F307EB100857798 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD65261F307EB100857798 /* Message.swift */; };
+		ACAD652A1F30809700857798 /* ChannelsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD65291F30809700857798 /* ChannelsResponse.swift */; };
+		ACAD652C1F30832100857798 /* ISO8601ExtendedDateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD652B1F30832100857798 /* ISO8601ExtendedDateTransform.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B9994F6B4AEE082CF2AF08B /* Pods_Chats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC83E478658A78105196CDC /* Pods-Chats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chats/Pods-Chats.debug.xcconfig"; sourceTree = "<group>"; };
+		2CAADCB9143D491068C72EA8 /* Pods-Chats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chats.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chats/Pods-Chats.release.xcconfig"; sourceTree = "<group>"; };
+		AC81262D1F308A9500C22B55 /* CustomTransform_RealmOptional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransform_RealmOptional.swift; sourceTree = "<group>"; };
+		AC81262F1F308C0A00C22B55 /* MessagesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesResponse.swift; sourceTree = "<group>"; };
 		ACAD650A1F30762A00857798 /* Chats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAD650D1F30762A00857798 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ACAD650F1F30762A00857798 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACAD650F1F30762A00857798 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		ACAD65121F30762A00857798 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACAD65141F30762A00857798 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACAD65171F30762A00857798 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACAD65191F30762A00857798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACAD651F1F307D8300857798 /* ServerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerAPI.swift; sourceTree = "<group>"; };
+		ACAD65221F307E3E00857798 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		ACAD65241F307EAA00857798 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ACAD65261F307EB100857798 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		ACAD65291F30809700857798 /* ChannelsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsResponse.swift; sourceTree = "<group>"; };
+		ACAD652B1F30832100857798 /* ISO8601ExtendedDateTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISO8601ExtendedDateTransform.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +49,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CD1B00F40397027BB355021 /* Pods_Chats.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09BFF9CCA18302D2E8668F04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B9994F6B4AEE082CF2AF08B /* Pods_Chats.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC8126311F308C8100C22B55 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ACAD652B1F30832100857798 /* ISO8601ExtendedDateTransform.swift */,
+				AC81262D1F308A9500C22B55 /* CustomTransform_RealmOptional.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		AC8126321F308C8D00C22B55 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				ACAD65291F30809700857798 /* ChannelsResponse.swift */,
+				AC81262F1F308C0A00C22B55 /* MessagesResponse.swift */,
+			);
+			name = Responses;
+			sourceTree = "<group>";
+		};
 		ACAD65011F30762900857798 = {
 			isa = PBXGroup;
 			children = (
 				ACAD650C1F30762A00857798 /* Chats */,
 				ACAD650B1F30762A00857798 /* Products */,
+				E0B7AB7CB19FFB4CDE8DDC38 /* Pods */,
+				09BFF9CCA18302D2E8668F04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +103,45 @@
 		ACAD650C1F30762A00857798 /* Chats */ = {
 			isa = PBXGroup;
 			children = (
+				ACAD65211F307E1F00857798 /* Model */,
 				ACAD650D1F30762A00857798 /* AppDelegate.swift */,
-				ACAD650F1F30762A00857798 /* ViewController.swift */,
+				ACAD650F1F30762A00857798 /* ChatsViewController.swift */,
 				ACAD65111F30762A00857798 /* Main.storyboard */,
 				ACAD65141F30762A00857798 /* Assets.xcassets */,
 				ACAD65161F30762A00857798 /* LaunchScreen.storyboard */,
 				ACAD65191F30762A00857798 /* Info.plist */,
+				ACAD65281F30808400857798 /* API */,
 			);
 			path = Chats;
+			sourceTree = "<group>";
+		};
+		ACAD65211F307E1F00857798 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACAD65221F307E3E00857798 /* Channel.swift */,
+				ACAD65241F307EAA00857798 /* User.swift */,
+				ACAD65261F307EB100857798 /* Message.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		ACAD65281F30808400857798 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				ACAD651F1F307D8300857798 /* ServerAPI.swift */,
+				AC8126321F308C8D00C22B55 /* Responses */,
+				AC8126311F308C8100C22B55 /* Extensions */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		E0B7AB7CB19FFB4CDE8DDC38 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BC83E478658A78105196CDC /* Pods-Chats.debug.xcconfig */,
+				2CAADCB9143D491068C72EA8 /* Pods-Chats.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +151,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACAD651C1F30762A00857798 /* Build configuration list for PBXNativeTarget "Chats" */;
 			buildPhases = (
+				3E04E274ABD2DD9D591FCEF3 /* [CP] Check Pods Manifest.lock */,
 				ACAD65061F30762A00857798 /* Sources */,
 				ACAD65071F30762A00857798 /* Frameworks */,
 				ACAD65081F30762A00857798 /* Resources */,
+				E7F488050631345AED2B0079 /* [CP] Embed Pods Frameworks */,
+				EBC24B18CDD58B0FCF1B15BF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,12 +215,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E04E274ABD2DD9D591FCEF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E7F488050631345AED2B0079 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chats/Pods-Chats-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBC24B18CDD58B0FCF1B15BF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chats/Pods-Chats-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ACAD65061F30762A00857798 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACAD65101F30762A00857798 /* ViewController.swift in Sources */,
+				ACAD65101F30762A00857798 /* ChatsViewController.swift in Sources */,
+				ACAD65231F307E3E00857798 /* Channel.swift in Sources */,
+				ACAD65201F307D8300857798 /* ServerAPI.swift in Sources */,
+				ACAD652A1F30809700857798 /* ChannelsResponse.swift in Sources */,
+				ACAD65271F307EB100857798 /* Message.swift in Sources */,
+				ACAD652C1F30832100857798 /* ISO8601ExtendedDateTransform.swift in Sources */,
+				AC8126301F308C0A00C22B55 /* MessagesResponse.swift in Sources */,
+				ACAD65251F307EAA00857798 /* User.swift in Sources */,
+				AC81262E1F308A9500C22B55 /* CustomTransform_RealmOptional.swift in Sources */,
 				ACAD650E1F30762A00857798 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +398,7 @@
 		};
 		ACAD651D1F30762A00857798 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BC83E478658A78105196CDC /* Pods-Chats.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G6CFUV5Q49;
@@ -272,6 +412,7 @@
 		};
 		ACAD651E1F30762A00857798 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CAADCB9143D491068C72EA8 /* Pods-Chats.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G6CFUV5Q49;
@@ -302,6 +443,7 @@
 				ACAD651E1F30762A00857798 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
