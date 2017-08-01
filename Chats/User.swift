@@ -12,7 +12,7 @@ import RealmSwift
 import ObjectMapper_Realm
 
 class User: Object, Mappable {
-    var id = RealmOptional<Int>()
+    var id = -1
     dynamic var photo: String?
     dynamic var first_name: String?
     dynamic var last_name: String?
@@ -28,11 +28,20 @@ class User: Object, Mappable {
     
     // Mappable
     func mapping(map: Map) {
-        id <- (map["id"], CustomTransform<Int>())
+        id <- map["id"]
         photo <- map["photo"]
         first_name <- map["first_name"]
         last_name <- map["last_name"]
         username <- map["username"]
     }
 
+    func fullName() -> String {
+        if let first_name = first_name, let last_name = last_name {
+            return first_name + " " + last_name
+        } else if let first_name = first_name {
+            return first_name
+        } else {
+            return ""
+        }
+    }
 }
