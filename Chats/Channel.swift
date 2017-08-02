@@ -12,10 +12,10 @@ import RealmSwift
 import ObjectMapper_Realm
 
 class Channel: Object, Mappable {
-    var id = -1
+    dynamic var id = -1
     var users: List<User>? = List<User>()
     dynamic var last_message: Message?
-    var unread_messages_count = RealmOptional<Int>()
+    dynamic var unread_messages_count = 0
     
     required convenience init?(map: Map) {
         self.init()
@@ -30,6 +30,6 @@ class Channel: Object, Mappable {
         id <- map["id"]
         users <- (map["users"], ListTransform<User>())
         last_message <- map["last_message"] 
-        unread_messages_count <- (map["unread_messages_count"], CustomTransform<Int>())
+        unread_messages_count <- map["unread_messages_count"]
     }
 }

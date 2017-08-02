@@ -30,10 +30,10 @@
                                 <color key="sectionIndexBackgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="channelCell" rowHeight="70" id="OXf-o9-i6X" customClass="ChannelTableViewCell" customModule="Chats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="70"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OXf-o9-i6X" id="CHY-TG-1jC">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -64,6 +64,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rgv-hH-Sbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2608.8000000000002" y="341.37931034482762"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tRQ-uv-0en">
+            <objects>
+                <viewController id="PIU-eb-dpj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3z5-TI-6BN"/>
+                        <viewControllerLayoutGuide type="bottom" id="iwg-kq-5up"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ijI-Wx-63e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mRA-Hg-IER" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3462" y="341"/>
         </scene>
         <!--Kurses-->
         <scene sceneID="0fB-YV-jmQ">

@@ -11,7 +11,6 @@ import ObjectMapper
 import RealmSwift
 
 struct CustomTransform<T: RealmOptionalType>: TransformType {
-    
     public typealias Object = RealmOptional<T>
     public typealias JSON = Array<Any>
     

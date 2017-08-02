@@ -11,6 +11,8 @@ target 'Chats' do
   pod 'ObjectMapper', '~> 2.2'
   pod 'AlamofireObjectMapper', '~> 4.0'
 
+  pod 'SwipeCellKit'
+
   pod 'RealmSwift'
   pod 'ObjectMapper+Realm'
 end

@@ -43,26 +43,62 @@
                         <color key="textColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="sdn-kE-jLm">
+                        <rect key="frame" x="290" y="27.5" width="10" height="15"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f66-AO-ngS" customClass="PaddingLabel" customModule="Chats" customModuleProvider="target">
+                        <rect key="frame" x="277" y="30.5" width="6" height="22"/>
+                        <color key="backgroundColor" red="0.31372549019607843" green="0.76470588235294112" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="a4B-nT-zo0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="PgF-hD-tyP" firstAttribute="leading" secondItem="LlE-iN-QaE" secondAttribute="trailing" constant="11" id="2ER-ti-ESm"/>
+                    <constraint firstAttribute="trailing" secondItem="f66-AO-ngS" secondAttribute="trailing" constant="37" id="2hF-Tv-Y0h"/>
                     <constraint firstItem="gj7-xB-b32" firstAttribute="leading" secondItem="LlE-iN-QaE" secondAttribute="trailing" constant="11" id="7w2-Hx-t5D"/>
                     <constraint firstAttribute="bottom" secondItem="LlE-iN-QaE" secondAttribute="bottom" constant="12" id="CEE-RX-cS2"/>
+                    <constraint firstAttribute="trailing" secondItem="sdn-kE-jLm" secondAttribute="trailing" constant="20" id="F6W-KV-GxW"/>
                     <constraint firstItem="LlE-iN-QaE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="LsD-kB-KMB"/>
                     <constraint firstItem="Tl7-UV-CPp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="MNf-SI-Fho"/>
                     <constraint firstItem="gj7-xB-b32" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="U6M-ff-mXj"/>
                     <constraint firstItem="LlE-iN-QaE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="dHu-mU-tlX"/>
+                    <constraint firstAttribute="bottom" secondItem="f66-AO-ngS" secondAttribute="bottom" constant="17" id="ihH-jt-8oV"/>
                     <constraint firstItem="PgF-hD-tyP" firstAttribute="top" secondItem="gj7-xB-b32" secondAttribute="bottom" constant="3" id="mdu-d0-LcQ"/>
                     <constraint firstAttribute="trailing" secondItem="Tl7-UV-CPp" secondAttribute="trailing" constant="37" id="pDh-dJ-Df1"/>
+                    <constraint firstItem="f66-AO-ngS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PgF-hD-tyP" secondAttribute="trailing" constant="8" id="qGM-nB-z04"/>
+                    <constraint firstItem="sdn-kE-jLm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qqN-lU-nno"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="avatarImageView" destination="LlE-iN-QaE" id="ZB7-oR-59a"/>
                 <outlet property="dateTimeLabel" destination="Tl7-UV-CPp" id="OTM-5N-hBf"/>
                 <outlet property="messageTextLabel" destination="PgF-hD-tyP" id="nX9-aE-Ok1"/>
+                <outlet property="unreadMessagesCountLabel" destination="f66-AO-ngS" id="uev-mB-WDN"/>
                 <outlet property="userNameLabel" destination="gj7-xB-b32" id="6jJ-OA-Y65"/>
             </connections>
             <point key="canvasLocation" x="35" y="67"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Arrow" width="10" height="15"/>
+    </resources>
 </document>

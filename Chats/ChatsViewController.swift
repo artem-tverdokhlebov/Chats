@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 import Alamofire
 import AlamofireImage
+import SwipeCellKit
 
 class ChatsViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
@@ -47,6 +48,8 @@ extension ChatsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ChannelTableViewCell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath) as! ChannelTableViewCell
         
+        cell.delegate = self
+        
         let channel = self.channels[indexPath.row]
         
         if let userPhoto = channel.last_message?.sender?.photo, let userPhotoURL = URL(string: userPhoto) {
@@ -70,6 +73,13 @@ extension ChatsViewController: UITableViewDataSource {
             cell.dateTimeLabel.text = dateFormatter.string(from: date)
         }
         
+        if channel.unread_messages_count > 0 {
+            cell.unreadMessagesCountLabel.isHidden = false
+            cell.unreadMessagesCountLabel.text = String(channel.unread_messages_count)
+        } else {
+            cell.unreadMessagesCountLabel.isHidden = true
+        }
+        
         return cell
     }
     
@@ -82,3 +92,16 @@ extension ChatsViewController: UITableViewDataSource {
     }
 }
 
+extension ChatsViewController: SwipeTableViewCellDelegate {
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .left else { return nil }
+        
+        let deleteAction = SwipeAction(style: .default, title: "Remove") { action, indexPath in
+            // handle action by updating model with deletion
+        }
+        
+        deleteAction.backgroundColor = UIColor(red: 74/255, green: 144/255, blue: 226/255, alpha: 1.0)
+        
+        return [deleteAction]
+    }
+}

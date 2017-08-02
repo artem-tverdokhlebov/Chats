@@ -12,7 +12,7 @@ import RealmSwift
 import ObjectMapper_Realm
 
 class User: Object, Mappable {
-    var id = -1
+    dynamic var id = -1
     dynamic var photo: String?
     dynamic var first_name: String?
     dynamic var last_name: String?

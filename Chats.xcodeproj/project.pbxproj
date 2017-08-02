@@ -13,6 +13,7 @@
 		AC8126361F30903700C22B55 /* ChannelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC8126341F30903700C22B55 /* ChannelTableViewCell.xib */; };
 		AC8126381F30922400C22B55 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8126371F30922400C22B55 /* Reachability.swift */; };
 		AC81263A1F30AB9600C22B55 /* CustomTransform_RealmOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8126391F30AB9600C22B55 /* CustomTransform_RealmOptional.swift */; };
+		AC81263D1F30B7C800C22B55 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81263C1F30B7C800C22B55 /* PaddingLabel.swift */; };
 		ACAD650E1F30762A00857798 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD650D1F30762A00857798 /* AppDelegate.swift */; };
 		ACAD65101F30762A00857798 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD650F1F30762A00857798 /* ChatsViewController.swift */; };
 		ACAD65131F30762A00857798 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAD65111F30762A00857798 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		AC8126341F30903700C22B55 /* ChannelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelTableViewCell.xib; sourceTree = "<group>"; };
 		AC8126371F30922400C22B55 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		AC8126391F30AB9600C22B55 /* CustomTransform_RealmOptional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransform_RealmOptional.swift; sourceTree = "<group>"; };
+		AC81263C1F30B7C800C22B55 /* PaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		ACAD650A1F30762A00857798 /* Chats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAD650D1F30762A00857798 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACAD650F1F30762A00857798 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 			name = Responses;
 			sourceTree = "<group>";
 		};
+		AC81263B1F30B7BD00C22B55 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AC81263C1F30B7C800C22B55 /* PaddingLabel.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		ACAD65011F30762900857798 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,7 @@
 		ACAD650C1F30762A00857798 /* Chats */ = {
 			isa = PBXGroup;
 			children = (
+				AC81263B1F30B7BD00C22B55 /* UI */,
 				ACAD65211F307E1F00857798 /* Model */,
 				ACAD650D1F30762A00857798 /* AppDelegate.swift */,
 				ACAD650F1F30762A00857798 /* ChatsViewController.swift */,
@@ -288,6 +299,7 @@
 				AC81263A1F30AB9600C22B55 /* CustomTransform_RealmOptional.swift in Sources */,
 				ACAD652C1F30832100857798 /* ISO8601ExtendedDateTransform.swift in Sources */,
 				AC8126301F308C0A00C22B55 /* MessagesResponse.swift in Sources */,
+				AC81263D1F30B7C800C22B55 /* PaddingLabel.swift in Sources */,
 				ACAD65251F307EAA00857798 /* User.swift in Sources */,
 				ACAD650E1F30762A00857798 /* AppDelegate.swift in Sources */,
 			);

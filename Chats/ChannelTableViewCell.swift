@@ -8,8 +8,9 @@
 
 import UIKit
 import AlamofireImage
+import SwipeCellKit
 
-class ChannelTableViewCell: UITableViewCell {
+class ChannelTableViewCell: SwipeTableViewCell {
 
     @IBOutlet weak var avatarImageView: UIImageView! {
         didSet {
@@ -22,6 +23,13 @@ class ChannelTableViewCell: UITableViewCell {
     @IBOutlet weak var messageTextLabel: UILabel!
     
     @IBOutlet weak var dateTimeLabel: UILabel!
+    
+    @IBOutlet weak var unreadMessagesCountLabel: PaddingLabel! {
+        didSet {
+            unreadMessagesCountLabel.layer.cornerRadius = 11
+            unreadMessagesCountLabel.clipsToBounds = true
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
