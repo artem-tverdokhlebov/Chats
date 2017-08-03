@@ -59,8 +59,6 @@ class ChatsViewController: UIViewController {
         
         firstCell.label.text = "Chat"
         firstCell.label.font = UIFont.systemFont(ofSize: 13, weight: UIFontWeightMedium)
-        firstCell.badgeLabel.text = "1"
-        firstCell.isBadgeLabelHidden = false
         firstCell.badgeLabel.font = UIFont.systemFont(ofSize: 11, weight: UIFontWeightThin)
         
         secondCell.label.text = "Live Chat"
@@ -98,6 +96,10 @@ class ChatsViewController: UIViewController {
             let unreadMessagesCount = self?.channelsWithUnread.map { $0.unread_messages_count }.reduce(0, +)
             if let unreadMessagesCount = unreadMessagesCount, unreadMessagesCount > 0 {
                 self?.firstCell.badgeLabel.text = String(unreadMessagesCount)
+                self?.firstCell.badgeLabel.sizeToFit()
+                self?.firstCell.isBadgeLabelHidden = false
+            } else {
+                self?.firstCell.isBadgeLabelHidden = true
             }
             
             self?.tableView.reloadData()
