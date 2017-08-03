@@ -16,5 +16,4 @@ target 'Chats' do
   
   # UI
   pod 'SwipeCellKit'
-  pod 'IQKeyboardManagerSwift'
 end

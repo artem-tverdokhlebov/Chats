@@ -31,11 +31,13 @@ class MessagesViewController: UIViewController {
         
         navigationItem.title = channel?.users.first?.fullName()
         
-        let blockBarButtonItem = UIBarButtonItem(title: "Block", style: .plain, target: nil, action: nil)
-        blockBarButtonItem.tintColor = UIColor.white
+        let blockBarButtonItem = UIButton()
+        blockBarButtonItem.setTitle("Block", for: .normal)
+        blockBarButtonItem.titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: UIFontWeightMedium)
+        blockBarButtonItem.sizeToFit()
+        blockBarButtonItem.titleLabel?.textColor = UIColor.white
         
-        navigationItem.rightBarButtonItem = blockBarButtonItem
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: blockBarButtonItem)
         
         self.tableView.register(UINib(nibName: "RightMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "rightMessageCell")
         
@@ -60,18 +62,6 @@ class MessagesViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-                self.bottomLayoutConstraint.constant = keyboardSize.height
-        }
-    }
-    
-    func keyboardWillHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-                self.bottomLayoutConstraint.constant = 0
-        }
-    }
-    
     func groupMessagesByDays(messages: [Message]) -> [[Message]]{
         var lastDate = messages.first?.create_date
         let calendar = NSCalendar.current
@@ -94,6 +84,21 @@ class MessagesViewController: UIViewController {
         groups.append(lastGroup)
         
         return groups
+    }
+    
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            self.bottomLayoutConstraint.constant = keyboardSize.height
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        self.bottomLayoutConstraint.constant = 0
+    }
+
+    @IBAction func back() {
+        navigationController?.popViewController(animated: true)
     }
 }
 
