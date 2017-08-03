@@ -22,7 +22,6 @@
 		AC8126301F308C0A00C22B55 /* MessagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81262F1F308C0A00C22B55 /* MessagesResponse.swift */; };
 		AC8126351F30903700C22B55 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8126331F30903700C22B55 /* ChannelTableViewCell.swift */; };
 		AC8126361F30903700C22B55 /* ChannelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC8126341F30903700C22B55 /* ChannelTableViewCell.xib */; };
-		AC81263A1F30AB9600C22B55 /* CustomTransform_RealmOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8126391F30AB9600C22B55 /* CustomTransform_RealmOptional.swift */; };
 		AC81263D1F30B7C800C22B55 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81263C1F30B7C800C22B55 /* PaddingLabel.swift */; };
 		ACAD650E1F30762A00857798 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD650D1F30762A00857798 /* AppDelegate.swift */; };
 		ACAD65101F30762A00857798 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD650F1F30762A00857798 /* ChatsViewController.swift */; };
@@ -55,7 +54,6 @@
 		AC81262F1F308C0A00C22B55 /* MessagesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesResponse.swift; sourceTree = "<group>"; };
 		AC8126331F30903700C22B55 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
 		AC8126341F30903700C22B55 /* ChannelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelTableViewCell.xib; sourceTree = "<group>"; };
-		AC8126391F30AB9600C22B55 /* CustomTransform_RealmOptional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransform_RealmOptional.swift; sourceTree = "<group>"; };
 		AC81263C1F30B7C800C22B55 /* PaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		ACAD650A1F30762A00857798 /* Chats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAD650D1F30762A00857798 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,11 +102,23 @@
 			name = "Segmented Control";
 			sourceTree = "<group>";
 		};
+		AC3CDCAD1F33175C001A7BB5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AC8126331F30903700C22B55 /* ChannelTableViewCell.swift */,
+				AC8126341F30903700C22B55 /* ChannelTableViewCell.xib */,
+				AC3CDCA31F322DC6001A7BB5 /* LeftMessageTableViewCell.swift */,
+				AC3CDCA41F322DC6001A7BB5 /* LeftMessageTableViewCell.xib */,
+				AC3CDCA71F322DF4001A7BB5 /* RightMessageTableViewCell.swift */,
+				AC3CDCA81F322DF4001A7BB5 /* RightMessageTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		AC8126311F308C8100C22B55 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				ACAD652B1F30832100857798 /* ISO8601ExtendedDateTransform.swift */,
-				AC8126391F30AB9600C22B55 /* CustomTransform_RealmOptional.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -128,6 +138,7 @@
 				AC81263C1F30B7C800C22B55 /* PaddingLabel.swift */,
 				AC3CDC9E1F31F797001A7BB5 /* Segmented Control */,
 				AC3CDCAB1F32E5B8001A7BB5 /* RoundedPaddingLabel.swift */,
+				AC3CDCAD1F33175C001A7BB5 /* Cells */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -156,19 +167,13 @@
 				AC81263B1F30B7BD00C22B55 /* UI */,
 				ACAD65211F307E1F00857798 /* Model */,
 				ACAD650D1F30762A00857798 /* AppDelegate.swift */,
-				ACAD650F1F30762A00857798 /* ChatsViewController.swift */,
 				ACAD65111F30762A00857798 /* Main.storyboard */,
+				ACAD650F1F30762A00857798 /* ChatsViewController.swift */,
 				AC3CDCA11F3229DF001A7BB5 /* MessagesViewController.swift */,
 				ACAD65141F30762A00857798 /* Assets.xcassets */,
 				ACAD65161F30762A00857798 /* LaunchScreen.storyboard */,
 				ACAD65191F30762A00857798 /* Info.plist */,
 				ACAD65281F30808400857798 /* API */,
-				AC8126331F30903700C22B55 /* ChannelTableViewCell.swift */,
-				AC8126341F30903700C22B55 /* ChannelTableViewCell.xib */,
-				AC3CDCA31F322DC6001A7BB5 /* LeftMessageTableViewCell.swift */,
-				AC3CDCA41F322DC6001A7BB5 /* LeftMessageTableViewCell.xib */,
-				AC3CDCA71F322DF4001A7BB5 /* RightMessageTableViewCell.swift */,
-				AC3CDCA81F322DF4001A7BB5 /* RightMessageTableViewCell.xib */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -342,7 +347,6 @@
 				AC8126351F30903700C22B55 /* ChannelTableViewCell.swift in Sources */,
 				AC3CDC9C1F31F78F001A7BB5 /* SPSegmentControlStyleProtocol.swift in Sources */,
 				ACAD65271F307EB100857798 /* Message.swift in Sources */,
-				AC81263A1F30AB9600C22B55 /* CustomTransform_RealmOptional.swift in Sources */,
 				AC3CDCA91F322DF4001A7BB5 /* RightMessageTableViewCell.swift in Sources */,
 				ACAD652C1F30832100857798 /* ISO8601ExtendedDateTransform.swift in Sources */,
 				AC8126301F308C0A00C22B55 /* MessagesResponse.swift in Sources */,
