@@ -19,7 +19,7 @@ class LeftMessageTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        messageLabel.setRoundedCorners(corners: [.topLeft, .bottomLeft, .bottomRight], radius: 10)
+        messageLabel.setRoundedCorners(corners: [.topRight, .bottomLeft, .bottomRight], radius: 10)
         
         avatarImageView.clipsToBounds = true
         avatarImageView.layer.cornerRadius = avatarImageView.frame.width / 2

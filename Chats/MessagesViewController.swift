@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Emoji
 
 class MessagesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -114,7 +115,7 @@ extension MessagesViewController: UITableViewDataSource {
             
             cell.transform = CGAffineTransform(rotationAngle: (CGFloat)(Double.pi))
             
-            cell.messageLabel.text = message.text
+            cell.messageLabel.text = message.text?.emojiUnescapedString
             
             if let date = message.create_date {
                 cell.timeLabel.text = dateFormatter.string(from: date)
@@ -126,7 +127,7 @@ extension MessagesViewController: UITableViewDataSource {
             
             cell.transform = CGAffineTransform(rotationAngle: (CGFloat)(Double.pi))
             
-            cell.messageLabel.text = message.text
+            cell.messageLabel.text = message.text?.emojiUnescapedString
             
             if let date = message.create_date {
                 cell.timeLabel.text = dateFormatter.string(from: date)

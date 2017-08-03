@@ -5,6 +5,7 @@ PODS:
   - AlamofireObjectMapper (4.1.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
+  - Emoji-swift (0.1.0)
   - ObjectMapper (2.2.8)
   - ObjectMapper+Realm (0.3):
     - ObjectMapper
@@ -20,6 +21,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.4)
   - AlamofireImage (~> 3.1)
   - AlamofireObjectMapper (~> 4.0)
+  - Emoji-swift
   - ObjectMapper (~> 2.2)
   - ObjectMapper+Realm
   - RealmSwift
@@ -29,12 +31,13 @@ SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
+  Emoji-swift: 20010383183f4d85e6e5a2b9642b96ebdb4f06ae
   ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
   ObjectMapper+Realm: 98992926f775a4fdf1c025541b97c78119f15b8a
   Realm: f91fb43bd474c4f731a116ebf7392c75dd015920
   RealmSwift: 207f12a4a36b696c5183c60a1c06d70234a23e56
   SwipeCellKit: 893661973276ae3512a84ac0a47055923b10731e
 
-PODFILE CHECKSUM: 4c108768d36cb2f001172c27e34995a63e903879
+PODFILE CHECKSUM: f749cfa7d430dcf270afaaa1997bac7ef29b1b68
 
 COCOAPODS: 1.2.1

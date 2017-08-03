@@ -16,4 +16,5 @@ target 'Chats' do
   
   # UI
   pod 'SwipeCellKit'
+  pod 'Emoji-swift'
 end
