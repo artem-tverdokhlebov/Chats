@@ -118,6 +118,11 @@ extension ChatsViewController: UITableViewDelegate {
             messagesViewController.channelID = self.channelsWithRead[indexPath.row].id
         }
         
+        messagesViewController.navigationItem.leftBarButtonItem = self.navigationItem.leftBarButtonItem
+        messagesViewController.navigationItem.leftBarButtonItem?.target = messagesViewController.navigationController
+        messagesViewController.navigationItem.leftBarButtonItem?.action = #selector(navigationController?.popViewController(animated:))
+        //        messagesViewController.navigationItem.title = channel.
+        
         self.navigationController?.pushViewController(messagesViewController, animated: true)
     }
 }

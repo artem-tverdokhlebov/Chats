@@ -15,7 +15,6 @@ target 'Chats' do
   pod 'ObjectMapper+Realm'
   
   # UI
-  pod 'BetterSegmentedControl', git: 'https://github.com/artem-tverdokhlebov/BetterSegmentedControl.git'
   pod 'SwipeCellKit'
   pod 'IQKeyboardManagerSwift'
 end
