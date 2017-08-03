@@ -13,6 +13,12 @@
 		AC3CDC9C1F31F78F001A7BB5 /* SPSegmentControlStyleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3CDC981F31F78F001A7BB5 /* SPSegmentControlStyleProtocol.swift */; };
 		AC3CDC9D1F31F78F001A7BB5 /* SPSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3CDC991F31F78F001A7BB5 /* SPSegmentedControl.swift */; };
 		AC3CDCA01F31F7E5001A7BB5 /* SPAnimationSpring.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3CDC9F1F31F7E5001A7BB5 /* SPAnimationSpring.swift */; };
+		AC3CDCA21F3229DF001A7BB5 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3CDCA11F3229DF001A7BB5 /* MessagesViewController.swift */; };
+		AC3CDCA51F322DC6001A7BB5 /* LeftMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3CDCA31F322DC6001A7BB5 /* LeftMessageTableViewCell.swift */; };
+		AC3CDCA61F322DC6001A7BB5 /* LeftMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC3CDCA41F322DC6001A7BB5 /* LeftMessageTableViewCell.xib */; };
+		AC3CDCA91F322DF4001A7BB5 /* RightMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3CDCA71F322DF4001A7BB5 /* RightMessageTableViewCell.swift */; };
+		AC3CDCAA1F322DF4001A7BB5 /* RightMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC3CDCA81F322DF4001A7BB5 /* RightMessageTableViewCell.xib */; };
+		AC3CDCAC1F32E5B8001A7BB5 /* RoundedPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3CDCAB1F32E5B8001A7BB5 /* RoundedPaddingLabel.swift */; };
 		AC8126301F308C0A00C22B55 /* MessagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81262F1F308C0A00C22B55 /* MessagesResponse.swift */; };
 		AC8126351F30903700C22B55 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8126331F30903700C22B55 /* ChannelTableViewCell.swift */; };
 		AC8126361F30903700C22B55 /* ChannelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC8126341F30903700C22B55 /* ChannelTableViewCell.xib */; };
@@ -41,6 +47,12 @@
 		AC3CDC981F31F78F001A7BB5 /* SPSegmentControlStyleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SPSegmentControlStyleProtocol.swift; path = SegmentedControl/SPSegmentControlStyleProtocol.swift; sourceTree = "<group>"; };
 		AC3CDC991F31F78F001A7BB5 /* SPSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SPSegmentedControl.swift; path = SegmentedControl/SPSegmentedControl.swift; sourceTree = "<group>"; };
 		AC3CDC9F1F31F7E5001A7BB5 /* SPAnimationSpring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPAnimationSpring.swift; sourceTree = "<group>"; };
+		AC3CDCA11F3229DF001A7BB5 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		AC3CDCA31F322DC6001A7BB5 /* LeftMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMessageTableViewCell.swift; sourceTree = "<group>"; };
+		AC3CDCA41F322DC6001A7BB5 /* LeftMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftMessageTableViewCell.xib; sourceTree = "<group>"; };
+		AC3CDCA71F322DF4001A7BB5 /* RightMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightMessageTableViewCell.swift; sourceTree = "<group>"; };
+		AC3CDCA81F322DF4001A7BB5 /* RightMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightMessageTableViewCell.xib; sourceTree = "<group>"; };
+		AC3CDCAB1F32E5B8001A7BB5 /* RoundedPaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedPaddingLabel.swift; sourceTree = "<group>"; };
 		AC81262F1F308C0A00C22B55 /* MessagesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesResponse.swift; sourceTree = "<group>"; };
 		AC8126331F30903700C22B55 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
 		AC8126341F30903700C22B55 /* ChannelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelTableViewCell.xib; sourceTree = "<group>"; };
@@ -117,6 +129,7 @@
 			children = (
 				AC81263C1F30B7C800C22B55 /* PaddingLabel.swift */,
 				AC3CDC9E1F31F797001A7BB5 /* Segmented Control */,
+				AC3CDCAB1F32E5B8001A7BB5 /* RoundedPaddingLabel.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -147,12 +160,17 @@
 				ACAD650D1F30762A00857798 /* AppDelegate.swift */,
 				ACAD650F1F30762A00857798 /* ChatsViewController.swift */,
 				ACAD65111F30762A00857798 /* Main.storyboard */,
+				AC3CDCA11F3229DF001A7BB5 /* MessagesViewController.swift */,
 				ACAD65141F30762A00857798 /* Assets.xcassets */,
 				ACAD65161F30762A00857798 /* LaunchScreen.storyboard */,
 				ACAD65191F30762A00857798 /* Info.plist */,
 				ACAD65281F30808400857798 /* API */,
 				AC8126331F30903700C22B55 /* ChannelTableViewCell.swift */,
 				AC8126341F30903700C22B55 /* ChannelTableViewCell.xib */,
+				AC3CDCA31F322DC6001A7BB5 /* LeftMessageTableViewCell.swift */,
+				AC3CDCA41F322DC6001A7BB5 /* LeftMessageTableViewCell.xib */,
+				AC3CDCA71F322DF4001A7BB5 /* RightMessageTableViewCell.swift */,
+				AC3CDCA81F322DF4001A7BB5 /* RightMessageTableViewCell.xib */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -253,6 +271,8 @@
 				ACAD65181F30762A00857798 /* LaunchScreen.storyboard in Resources */,
 				AC8126361F30903700C22B55 /* ChannelTableViewCell.xib in Resources */,
 				ACAD65151F30762A00857798 /* Assets.xcassets in Resources */,
+				AC3CDCA61F322DC6001A7BB5 /* LeftMessageTableViewCell.xib in Resources */,
+				AC3CDCAA1F322DF4001A7BB5 /* RightMessageTableViewCell.xib in Resources */,
 				ACAD65131F30762A00857798 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,15 +335,19 @@
 				ACAD65101F30762A00857798 /* ChatsViewController.swift in Sources */,
 				ACAD65231F307E3E00857798 /* Channel.swift in Sources */,
 				AC3CDC9D1F31F78F001A7BB5 /* SPSegmentedControl.swift in Sources */,
+				AC3CDCA21F3229DF001A7BB5 /* MessagesViewController.swift in Sources */,
+				AC3CDCA51F322DC6001A7BB5 /* LeftMessageTableViewCell.swift in Sources */,
 				AC8126381F30922400C22B55 /* Reachability.swift in Sources */,
 				ACAD65201F307D8300857798 /* ServerAPI.swift in Sources */,
 				AC3CDC9B1F31F78F001A7BB5 /* SPSegmentControlProtocol.swift in Sources */,
 				ACAD652A1F30809700857798 /* ChannelsResponse.swift in Sources */,
 				AC3CDC9A1F31F78F001A7BB5 /* SPSegmentControllCell.swift in Sources */,
+				AC3CDCAC1F32E5B8001A7BB5 /* RoundedPaddingLabel.swift in Sources */,
 				AC8126351F30903700C22B55 /* ChannelTableViewCell.swift in Sources */,
 				AC3CDC9C1F31F78F001A7BB5 /* SPSegmentControlStyleProtocol.swift in Sources */,
 				ACAD65271F307EB100857798 /* Message.swift in Sources */,
 				AC81263A1F30AB9600C22B55 /* CustomTransform_RealmOptional.swift in Sources */,
+				AC3CDCA91F322DF4001A7BB5 /* RightMessageTableViewCell.swift in Sources */,
 				ACAD652C1F30832100857798 /* ISO8601ExtendedDateTransform.swift in Sources */,
 				AC8126301F308C0A00C22B55 /* MessagesResponse.swift in Sources */,
 				AC3CDCA01F31F7E5001A7BB5 /* SPAnimationSpring.swift in Sources */,

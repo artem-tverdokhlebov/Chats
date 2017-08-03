@@ -12,11 +12,27 @@ import Alamofire
 import AlamofireImage
 import SwipeCellKit
 
-class ChatsViewController: UIViewController, UITableViewDelegate {
+class ChatsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControlContainerView: UIView!
     
     lazy var serverAPI: ServerAPI = ServerAPI()
+    
+    var firstCell = SPSegmentedControlCell(layout: .textWithBadge) {
+        didSet {
+            firstCell.label.text = "Chat"
+            firstCell.label.font = UIFont.systemFont(ofSize: 13, weight: UIFontWeightMedium)
+            firstCell.badgeLabel.font = UIFont.systemFont(ofSize: 11, weight: UIFontWeightThin)
+        }
+    }
+    
+    var secondCell = SPSegmentedControlCell(layout: .textWithBadge) {
+        didSet {
+            secondCell.label.text = "Live Chat"
+            secondCell.label.font = UIFont.systemFont(ofSize: 13, weight: UIFontWeightMedium)
+            secondCell.badgeLabel.font = UIFont.systemFont(ofSize: 11, weight: UIFontWeightThin)
+        }
+    }
     
     let realm = try! Realm()
     lazy var channelsWithUnread: Results<Channel> = { self.realm.objects(Channel.self).filter("unread_messages_count > 0") }()
@@ -41,16 +57,14 @@ class ChatsViewController: UIViewController, UITableViewDelegate {
         
         control.backgroundColor = UIColor(red: 7/255, green: 7/255, blue: 7/255, alpha: 0.2)
         
-        let firstCell = SPSegmentedControlCell(layout: .textWithBadge)
         firstCell.label.text = "Chat"
         firstCell.label.font = UIFont.systemFont(ofSize: 13, weight: UIFontWeightMedium)
         firstCell.badgeLabel.text = "1"
+        firstCell.isBadgeLabelHidden = false
         firstCell.badgeLabel.font = UIFont.systemFont(ofSize: 11, weight: UIFontWeightThin)
         
-        let secondCell = SPSegmentedControlCell(layout: .textWithBadge)
         secondCell.label.text = "Live Chat"
         secondCell.label.font = UIFont.systemFont(ofSize: 13, weight: UIFontWeightMedium)
-        secondCell.badgeLabel.text = "10"
         secondCell.badgeLabel.font = UIFont.systemFont(ofSize: 11, weight: UIFontWeightThin)
         
         control.add(cells: [
@@ -81,13 +95,30 @@ class ChatsViewController: UIViewController, UITableViewDelegate {
         self.tableView.register(UINib(nibName: "ChannelTableViewCell", bundle: nil), forCellReuseIdentifier: "channelCell")
         
         serverAPI.updateChannels { [weak self] (result) in
+            let unreadMessagesCount = self?.channelsWithUnread.map { $0.unread_messages_count }.reduce(0, +)
+            if let unreadMessagesCount = unreadMessagesCount, unreadMessagesCount > 0 {
+                self?.firstCell.badgeLabel.text = String(unreadMessagesCount)
+            }
+            
             self?.tableView.reloadData()
         }
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+extension ChatsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let messagesViewController: MessagesViewController = storyboard.instantiateViewController(withIdentifier: "messagesVC") as! MessagesViewController
+        
+        if indexPath.section == 0 {
+            messagesViewController.channelID = self.channelsWithUnread[indexPath.row].id
+        } else {
+            messagesViewController.channelID = self.channelsWithRead[indexPath.row].id
+        }
+        
+        self.navigationController?.pushViewController(messagesViewController, animated: true)
     }
 }
 

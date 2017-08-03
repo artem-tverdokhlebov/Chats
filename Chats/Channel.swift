@@ -13,7 +13,7 @@ import ObjectMapper_Realm
 
 class Channel: Object, Mappable {
     dynamic var id = -1
-    var users: List<User>? = List<User>()
+    var users: List<User> = List<User>()
     dynamic var last_message: Message?
     dynamic var unread_messages_count = 0
     

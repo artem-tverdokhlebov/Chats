@@ -27,6 +27,12 @@ class SPSegmentedControlCell: UIView {
     var label: UILabel = UILabel()
     var badgeLabel: PaddingLabel = PaddingLabel()
     
+    var isBadgeLabelHidden: Bool = true {
+        didSet {
+            badgeLabel.isHidden = isBadgeLabelHidden
+        }
+    }
+    
     var layout: SPSegmentedControlCellLayout = .onlyText {
         didSet {
             layoutIfNeeded()
@@ -66,6 +72,8 @@ class SPSegmentedControlCell: UIView {
         self.imageView.backgroundColor = UIColor.clear
         self.addSubview(self.imageView)
         
+        self.isBadgeLabelHidden = true
+        
         self.badgeLabel.leftInset = 6.0
         self.badgeLabel.rightInset = 6.0
         
@@ -76,7 +84,7 @@ class SPSegmentedControlCell: UIView {
         self.badgeLabel.textColor = UIColor.white
         
         self.badgeLabel.clipsToBounds = true
-
+        
         self.badgeLabel.text = ""
         self.addSubview(self.badgeLabel)
     }
@@ -127,12 +135,19 @@ class SPSegmentedControlCell: UIView {
             label.sizeToFit()
             
             badgeLabel.sizeToFit()
-            badgeLabel.layer.cornerRadius = self.badgeLabel.frame.height / 2
+            badgeLabel.layer.cornerRadius = self.badgeLabel.frame.width / 2
             
             badgeLabel.textAlignment = .center
             
             let space: CGFloat = self.frame.width * self.spaceBetweenImageAndLabelRelativeFactor
-            let elementsWidth: CGFloat = self.label.frame.width + space + self.badgeLabel.frame.width
+            
+            var elementsWidth: CGFloat = 0.0
+            if isBadgeLabelHidden {
+                elementsWidth = self.label.frame.width
+            } else {
+                elementsWidth = self.label.frame.width + space + self.badgeLabel.frame.width
+            }
+            
             let leftEdge = (self.frame.width - elementsWidth) / 2
             let centeringHeight = self.frame.height / 2
             
@@ -140,6 +155,7 @@ class SPSegmentedControlCell: UIView {
                 x: leftEdge + label.frame.width / 2,
                 y: centeringHeight
             )
+            
             self.badgeLabel.center = CGPoint.init(
                 x: leftEdge + self.label.frame.width + space + self.badgeLabel.frame.width / 2,
                 y: centeringHeight

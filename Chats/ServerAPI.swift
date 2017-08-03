@@ -19,7 +19,7 @@ class ServerAPI {
     lazy var realm = try! Realm()
     
     func updateChannels(completion: @escaping (Result<[Channel]>) -> Void) {
-        let URL = "\(baseURL)/api/chat/channels/"
+        let URL = "\(baseURL)/api/chat/channels/?format=json"
         Alamofire.request(URL, headers: ["Authorization": "Basic \(basicAuthToken)"]).responseObject { (response: DataResponse<ChannelsResponse>) in
             
             if case .failure(let error) = response.result {
@@ -42,7 +42,7 @@ class ServerAPI {
     }
     
     func updateMessages(inChannel channel: Channel, completion: @escaping (Result<[Message]>) -> Void) {
-        let URL = "\(baseURL)/api/chat/channels/\(channel.id)/messages"
+        let URL = "\(baseURL)/api/chat/channels/\(channel.id)/messages/?format=json"
         Alamofire.request(URL, headers: ["Authorization": "Basic \(basicAuthToken)"]).responseObject { (response: DataResponse<MessagesResponse>) in
             
             if case .failure(let error) = response.result {
@@ -52,10 +52,21 @@ class ServerAPI {
             
             if case .success(let messagesResponse) = response.result {
                 if let messages = messagesResponse.messages {
+                    let oldMessages = self.realm.objects(Message.self).filter("channel_id == \(channel.id)")
+                    
                     try! self.realm.write {
+                        self.realm.delete(oldMessages)
+                        
                         for message in messages {
+                            if let senderID = message.sender?.id {
+                                let sender = self.realm.object(ofType: User.self, forPrimaryKey: senderID)
+                                
+                                message.sender = sender
+                            }
+                            
                             message.channel_id.value = channel.id
-                            self.realm.add(message, update: true)
+
+                            self.realm.add(message)
                         }
                     }
                     

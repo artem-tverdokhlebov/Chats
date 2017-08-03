@@ -17,5 +17,5 @@ target 'Chats' do
   # UI
   pod 'BetterSegmentedControl', git: 'https://github.com/artem-tverdokhlebov/BetterSegmentedControl.git'
   pod 'SwipeCellKit'
-
+  pod 'IQKeyboardManagerSwift'
 end
